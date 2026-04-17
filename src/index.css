@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Georgia", "Hiragino Mincho ProN", "MS Mincho", serif;
+  --font-sans: "Inter", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+
+  --color-warm-bg: #FDFBFA;
+  --color-surface: #FFFFFF;
+  --color-olive: #5A6A50;
+  --color-soft-olive: #DDE2D9;
+  --color-text-main: #2D2D2D;
+  --color-text-muted: #6B6B6B;
+  --color-text-highlight: #A67C52;
+  --color-warm-border: #E8E3DF;
+
+  --radius-xl: 32px;
+  --radius-2xl: 40px;
+}
+
+@layer base {
+  body {
+    @apply bg-warm-bg text-text-main font-sans;
+  }
+
+  h1, h2, h3, .serif {
+    @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #E8E3DF;
+    border-radius: 10px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #DDE2D9;
+  }
+}
